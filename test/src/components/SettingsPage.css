@@ -1,0 +1,60 @@
+/* 전체 페이지에서 좌우 스크롤 방지 */
+html, body, #root {
+  width: 100vw;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+}
+
+.settings-root {
+  display: flex;
+  min-height: 100vh;
+  background: #e3c800;
+}
+.side-bar {
+  width: 33.3333vw;
+  background-color: #222;
+  flex-shrink: 0;
+  min-width: 0;
+}
+.settings-main {
+  flex: 2 1 0;
+  background: #e3c800;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+.settings-back-img {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+.settings-content {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+.settings-btn {
+  background: #ffe066;
+  color: #222;
+  border: 2px solid #e3c800;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 1.08em;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2px, border-color 0.2s;
+}
+.settings-btn:hover {
+  background: #ffe066;
+  border-color: #ffd700;
+}

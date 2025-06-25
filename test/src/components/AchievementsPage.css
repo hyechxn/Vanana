@@ -1,0 +1,141 @@
+.achievements-root {
+  display: flex;
+  min-height: 100vh;
+  background: #e3c800;
+  width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.achievements-side,
+.side-bar {
+  width: 33.3333vw;
+  background-color: black;
+  min-width: 0;
+  flex-shrink: 0;
+  /* 높이 고정 X, flex로 자동 확장 */
+  box-sizing: border-box;
+}
+.achievements-main {
+  flex: 0 0 33.3333vw;
+  background: #e3c800;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 33.3333vw;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+.achievements-list-vertical {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 18px;
+  margin-top: 20px; /* 위쪽에 여백 추가 */
+  margin-bottom: 24px;
+  overflow-y: visible; /* 세로 스크롤 막기 */
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.achievement-row-wide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #f7f7f7;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 12px 18px;
+  min-width: 0;
+  max-width: 80%;
+  width: 98%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-x: hidden; /* 좌우 스크롤 방지 */
+}
+.achievement-img-wide {
+  width: 48px;
+  height: 48px;
+  margin-right: 14px;
+  flex-shrink: 0;
+}
+.achievement-info-wide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  width: 100%;
+}
+.achievement-name-wide {
+  font-weight: bold;
+  font-size: 1.08em;
+  margin-bottom: 4px;
+  word-break: keep-all;
+}
+.achievement-desc-wide {
+  font-size: 0.98em;
+  color: #444;
+  word-break: break-word;
+}
+.achievements-back-img {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 10;
+}
+.achievement-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 0.93em;
+  color: #888;
+  min-width: 0;
+}
+.achievement-progress-bar-container {
+  width: 110px;
+  height: 0.9em;
+  background: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 40px;
+}
+.achievement-progress-bar {
+  height: 100%;
+  background: #e3c800;
+  transition: width 0.3s;
+  border-radius: 6px;
+}
+/* 제목 */
+/* DNFBitBitv2 폰트 적용 (경로 수정: src/assets/fonts/DNFBitBitv2.ttf) */
+@font-face {
+  font-family: 'DNFBitBitv2';
+  src: url('../assets/fonts/DNFBitBitv2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.achievements-title {
+  margin-top: 120px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  color: #222;
+  letter-spacing: 0.01em;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-family: 'DNFBitBitv2', sans-serif;
+  padding-left: 0;
+}

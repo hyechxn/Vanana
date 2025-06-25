@@ -1,0 +1,146 @@
+/* 전체 페이지 wrapper */
+.page-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #e3c800;
+  overflow: hidden;
+}
+
+/* 좌우 검은색 바 */
+.side-bar {
+  width: 33.3333vw;
+  background-color: black;
+  flex-shrink: 0;
+}
+
+/* 중앙 노란 배경 영역 */
+.ranking-center {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+  overflow-y: auto;
+  font-family: 'DNFBitBitv2', cursive;
+  background-color: #e3c800;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 상단 바 */
+.ranking-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 16px 0 0 0;
+  background: #e3c800;
+  border-bottom: 2px solid #222;
+}
+
+.ranking-title {
+  flex: 1;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+}
+
+.ranking-back-btn {
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  margin-left: 12px;
+  margin-right: 12px;
+  color: #222;
+  font-family: inherit;
+}
+
+.ranking-top3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.ranking-top3-box {
+  width: 100px;
+  background: #ffffcc;
+  border: 2px solid #222;
+  margin: 0 2px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 8px;
+  transition: padding 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.ranking-top3-box.first {
+  padding-top: 50px; /* 1등을 위로 더 크게 */
+}
+
+.ranking-top3-box.second {
+  padding-top: 30px; /* 2등을 약간 크게 */
+}
+
+.ranking-top3-box.third {
+  padding-top: 10px; /* 3등을 약간 크게 */
+}
+
+/* 등수, 이름, 점수 글씨를 위로 정렬 */
+.ranking-top3-box > div {
+  margin-top: 0 !important;
+}
+
+.ranking-table-wrap {
+  background: #ffffcc;
+  border: 2px solid #222;
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 8px;
+  font-size: 18px;
+  max-width: 500px;
+}
+
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ranking-table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.ranking-table tr.me {
+  background: #fffbe0;
+  font-weight: bold;
+}
+
+.ranking-table td {
+  padding: 4px;
+  text-align: center;
+}
+
+.ranking-me-badge {
+  background: #eee;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 14px;
+  margin-right: 6px;
+  border: 1px solid #bbb;
+}
+
+.ranking-my-rank {
+  margin-top: 18px;
+  font-weight: bold;
+  color: #222;
+  font-size: 18px;
+}
